@@ -44,12 +44,10 @@ namespace BDExam
                 menuWindow.Show();
                 this.Close();
             }
-            else
-            {
+            else 
                 MessageBox.Show("Логин и Пароль не найдены!");
-                
-               
-            }
+
+
         }
 
         private void btn_reg_Click(object sender, RoutedEventArgs e)
