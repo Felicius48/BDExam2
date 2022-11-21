@@ -1,0 +1,23 @@
+﻿<Window x:Class="BDExam.Windows.MenuWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDExam.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="MenuWindow" Height="450" Width="800">
+    <Grid>
+        <Menu Background="Gray" Height="30" VerticalAlignment="Top">
+            <MenuItem Header="Файлы">
+                <MenuItem.Icon>
+                    <Image Source="C:\Users\Makarov\source\repos\BDExam\BDExam\Images\3767084.png"/>
+                </MenuItem.Icon>
+                <MenuItem Header="Открыть">
+                    <MenuItem Header="Список студентов" x:Name="StudentList" Click="StudentList_Click"/>
+                    <MenuItem Header="Список Преподавателей" x:Name="TeacherList" Click="TeacherList_Click"/>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+    </Grid>
+</Window>

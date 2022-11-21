@@ -1,0 +1,63 @@
+﻿<Window x:Class="BDExam.Windows.RegWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDExam.Windows"
+        mc:Ignorable="d"
+        Title="RegWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="300"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Label Content="Логин" Width="50"
+               Height="25"
+               Grid.Column="1" Margin="25,2,225,273" Grid.Row="1"/>
+        <TextBox x:Name="user_Login"
+                 Width="250"
+                 Height="30"
+                 Grid.Row="1"
+                 MaxLength="25"
+                 VerticalContentAlignment="Center"
+                 HorizontalAlignment="Center" 
+                 Grid.Column="1" 
+                 Margin="0,27,0,233" Opacity="0.99" 
+                 IsTabStop="False" 
+                 ToolTip="Введите логин"/>
+        <Label Content="Пароль" Width="55"
+            Height="25"
+            Grid.Column="1" Margin="25,85,220,190" Grid.Row="1"/>
+        <PasswordBox x:Name="user_Password"
+            Width="250"
+            Height="30"
+            Grid.Row="1"
+            MaxLength="25"
+            VerticalContentAlignment="Center"
+            HorizontalAlignment="Center" 
+            Grid.Column="1" 
+            Margin="0,110,0,150"
+            ToolTip="Введите логин"/>
+        <Button x:Name="btn_reg"
+                Height="30"
+                Width="150"
+                Grid.Row="2"
+                Grid.Column="1"
+                Content="Зарегаться"
+                Click="btn_reg_Click"/>
+        <Button x:Name="exit_btn"
+                Width="50"
+                Height="50"
+                Grid.Row="2"
+                Grid.Column="2"
+                Content="Exit"
+                Click="exit_btn_Click"/>
+    </Grid>
+</Window>
