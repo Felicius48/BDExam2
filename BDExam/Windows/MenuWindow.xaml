@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDExam.Windows"
         mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         WindowStartupLocation="CenterScreen"
         Title="MenuWindow" Height="450" Width="800">
     <Grid>
-        <Menu Background="Gray" Height="30" VerticalAlignment="Top">
+        <Menu Background="Gray" Height="60" Padding="5" VerticalAlignment="Top">
             <MenuItem Header="Файлы">
                 <MenuItem.Icon>
                     <Image Source="C:\Users\Makarov\source\repos\BDExam\BDExam\Images\3767084.png"/>
