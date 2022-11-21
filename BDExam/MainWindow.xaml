@@ -3,6 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         xmlns:local="clr-namespace:BDExam"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
@@ -18,14 +26,11 @@
             <RowDefinition Height="300"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-
-        <Label Content="Логин" Width="50"
-               Height="25"
-               Grid.Column="1" Margin="25,2,225,273" Grid.Row="1"/>
         <TextBox x:Name="userLogin"
                  Width="250"
                  Height="30"
                  Grid.Row="1"
+                 materialDesign:HintAssist.Hint="Введите логин: "
                  MaxLength="25"
                  VerticalContentAlignment="Center"
                  HorizontalAlignment="Center" 
@@ -33,17 +38,15 @@
                  Margin="0,27,0,233" Opacity="0.99" 
                  IsTabStop="False" 
                  ToolTip="Введите логин"/>
-        <Label Content="Пароль" Width="55"
-            Height="25"
-            Grid.Column="1" Margin="25,85,220,190" Grid.Row="1"/>
         <PasswordBox x:Name="userPassword"
             Width="250"
             Height="30"
             Grid.Row="1"
-            MaxLength="25"
+            materialDesign:HintAssist.Hint="Введите пароль:"
             VerticalContentAlignment="Center"
             HorizontalAlignment="Center" 
             Grid.Column="1" 
+            MaxLength="25"
             Margin="0,110,0,150"
             ToolTip="Введите логин"/>
         <Button x:Name="btn_Enter"
@@ -58,6 +61,7 @@
                 Height="50"
                 Content="Reg"
                 Grid.Row="2"
+                FontSize="10"
                 Grid.Column="2"
                 Click="btn_reg_Click"/>
     </Grid>

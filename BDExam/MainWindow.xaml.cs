@@ -1,8 +1,10 @@
 ﻿using BDExam.EnterModels;
 using BDExam.Windows;
+using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -45,6 +47,8 @@ namespace BDExam
             else
             {
                 MessageBox.Show("Логин и Пароль не найдены!");
+                
+               
             }
         }
 
