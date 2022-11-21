@@ -25,21 +25,30 @@ namespace BDExam
     /// </summary>
     public partial class MainWindow : Window
     {
-        AutDataContext db;
+        AutDataModel.AutDataContext db;
+
 
         public MainWindow()
         {
             InitializeComponent();
+            db = new AutDataModel.AutDataContext();
+            db.AutDatas.Load();
 
-            db = new AutDataContext();
-            db.AutData.Load();
         }
 
 
         private void btn_Enter_Click(object sender, RoutedEventArgs e)
         {
-            if (db.AutData.Any(x => x.Login == userLogin.Text && x.Password == userPassword.Password))
+            if (db.AutDatas.Any(x => x.Login == userLogin.Text && x.Password == userPassword.Password && x.IdRole == 1))
             {
+                    MessageBox.Show("Привет Админ!");
+                    Windows.MenuWindow menuWindow = new Windows.MenuWindow();
+                    menuWindow.Show();
+                    this.Close();
+            }
+            if (db.AutDatas.Any(x => x.Login == userLogin.Text && x.Password == userPassword.Password && x.IdRole == 2))
+            {
+                MessageBox.Show("Привет Пользователь!");
                 Windows.MenuWindow menuWindow = new Windows.MenuWindow();
                 menuWindow.Show();
                 this.Close();

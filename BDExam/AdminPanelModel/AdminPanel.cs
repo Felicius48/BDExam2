@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BDExam.AutDataModel
+namespace BDExam.AdminPanelModel
 {
-    public class AutData
+    public class AdminPanel
     {
-        public int Id { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
-        public int IdRole { get; set; }
+
+        public int Role { get; set; }   
     }
 }

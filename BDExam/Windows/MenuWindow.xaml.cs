@@ -39,5 +39,10 @@ namespace BDExam.Windows
             teacherListWindow.Show();
             this.Close();
         }
+
+        private void admin_panels_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -71,12 +71,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AdminPanelModel\AdminPanel.cs" />
+    <Compile Include="AdminPanelModel\AdminPanelContext.cs" />
     <Compile Include="AutDataModel\AutData.cs" />
     <Compile Include="AutDataModel\AutDataContext.cs" />
     <Compile Include="StudentListModels\Student.cs" />
     <Compile Include="StudentListModels\StudentListContext.cs" />
     <Compile Include="TeacherListModels\Teacher.cs" />
     <Compile Include="TeacherListModels\TeacherListContext.cs" />
+    <Compile Include="Windows\AdminPanel.xaml.cs">
+      <DependentUpon>AdminPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Windows\MenuWindow.xaml.cs">
       <DependentUpon>MenuWindow.xaml</DependentUpon>
     </Compile>
@@ -103,6 +108,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Windows\AdminPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Windows\MenuWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

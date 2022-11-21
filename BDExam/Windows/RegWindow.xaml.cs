@@ -27,23 +27,26 @@ namespace BDExam.Windows
         {
             InitializeComponent();
             db = new AutDataContext();
-            db.autData.Load();
+            db.AutDatas.Load();
         }
 
         private void btn_reg_Click(object sender, RoutedEventArgs e)
         {
-            if (db.autData.Any(x => x.Login == user_Login.Text))
+            if (db.AutDatas.Any(x => x.Login == user_Login.Text))
             {
                 MessageBox.Show("Данный пользователь уже существует");
             }
             else
             {
-                AutData autData = new AutData()
+
+                AutData aut = new AutData()
                 {
+                    IdRole = 2,
                     Login = user_Login.Text,
                     Password = user_Password.Password
                 };
-                db.autData.Add(autData);
+
+                db.AutDatas.Add(aut);
                 db.SaveChanges();
                 MessageBox.Show("успех");
             }

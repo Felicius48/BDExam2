@@ -13,6 +13,6 @@ namespace BDExam.AutDataModel
         {
 
         }
-        public DbSet<AutData> autData { get; set; }
+        public DbSet<AutData> AutDatas { get; set; }
     }
 }
