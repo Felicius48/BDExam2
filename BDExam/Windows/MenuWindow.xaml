@@ -17,8 +17,9 @@
                 <MenuItem Header="Открыть">
                     <MenuItem Header="Список студентов" x:Name="StudentList" Click="StudentList_Click"/>
                     <MenuItem Header="Список Преподавателей" x:Name="TeacherList" Click="TeacherList_Click"/>
+                    <MenuItem Header="Список заказов" x:Name="SaleList" Click="SaleList_Click"/>
                 </MenuItem>
-                <MenuItem Header="Открыть" >
+                <MenuItem Header="Открыть панель админа" >
                     <MenuItem Header="Панель Админа" x:Name="admin_panels" Click="admin_panels_Click"/>
                 </MenuItem>
             </MenuItem>

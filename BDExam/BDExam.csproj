@@ -75,6 +75,9 @@
     <Compile Include="AdminPanelModel\AdminPanelContext.cs" />
     <Compile Include="AutDataModel\AutData.cs" />
     <Compile Include="AutDataModel\AutDataContext.cs" />
+    <Compile Include="intDostup.cs" />
+    <Compile Include="SalesModels\SaleModel.cs" />
+    <Compile Include="SalesModels\SaleModelContext.cs" />
     <Compile Include="StudentListModels\Student.cs" />
     <Compile Include="StudentListModels\StudentListContext.cs" />
     <Compile Include="TeacherListModels\Teacher.cs" />
@@ -87,6 +90,9 @@
     </Compile>
     <Compile Include="Windows\RegWindow.xaml.cs">
       <DependentUpon>RegWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\SalePanel.xaml.cs">
+      <DependentUpon>SalePanel.xaml</DependentUpon>
     </Compile>
     <Compile Include="Windows\StudentListWindow.xaml.cs">
       <DependentUpon>StudentListWindow.xaml</DependentUpon>
@@ -102,8 +108,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="EnterModels\AutData.cs" />
-    <Compile Include="EnterModels\AutDataContext.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -117,6 +121,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Windows\RegWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\SalePanel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -42,7 +42,14 @@ namespace BDExam.Windows
 
         private void admin_panels_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
 
+        private void SaleList_Click(object sender, RoutedEventArgs e)
+        {
+            SalePanel panel = new SalePanel();
+            panel.Show();
+            this.Close();
         }
     }
 }

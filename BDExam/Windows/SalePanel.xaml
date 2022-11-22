@@ -1,12 +1,12 @@
-﻿<Window x:Class="BDExam.Windows.TeacherListWindow"
+﻿<Window x:Class="BDExam.Windows.SalePanel"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BDExam.Windows"
-        mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="Список преподавателей" Height="450" Width="800">
+        mc:Ignorable="d"
+        Title="SalePanel" Height="450" Width="1000">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Margin" Value="20 8 20 8" />
@@ -14,19 +14,21 @@
             <Setter Property="Height" Value="30" />
         </Style>
     </Window.Resources>
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <DataGrid AutoGenerateColumns="False" x:Name="teacher_grid">
+        <DataGrid AutoGenerateColumns="False" x:Name="sales_panel">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Surname}" Header="Фамилия" Width="110"/>
-                <DataGridTextColumn Binding="{Binding Name}" Header="Имя" Width="110"/>
-                <DataGridTextColumn Binding="{Binding MiddleName}" Header="Отчество" Width="110"/>
-                <DataGridTextColumn Binding="{Binding DateofEmployment}" Header="Дата трудоустройства" Width="135"/>
-                <DataGridTextColumn Binding="{Binding Experience}" Header="Стаж, Лет" Width="110"/>
+                <DataGridTextColumn Binding="{Binding NumberSell}" Header="Номер заказа" Width="110"/>
+                <DataGridTextColumn Binding="{Binding DateOfMake}" Header="Дата создания заказа" Width="110"/>
+                <DataGridTextColumn Binding="{Binding DateOfSale}" Header="Время заказа" Width="110"/>
+                <DataGridTextColumn Binding="{Binding CodeClient}" Header="Код клиента" Width="110"/>
+                <DataGridTextColumn Binding="{Binding Sell}" Header="Услуги" Width="110"/>
+                <DataGridTextColumn Binding="{Binding Status}" Header="Статус заказа" Width="110"/>
+                <DataGridTextColumn Binding="{Binding DateOfCloseSell}" Header="Дата завершения заказа" Width="110"/>
+                <DataGridTextColumn Binding="{Binding TimeOfProkat}" Header="Время проката" Width="110"/>
             </DataGrid.Columns>
         </DataGrid>
 
@@ -36,5 +38,4 @@
             <Button x:Name="Exit_button" Content="Выйти" Click="Exit_button_Click"/>
         </StackPanel>
     </Grid>
-        
 </Window>

@@ -1,5 +1,4 @@
-﻿using BDExam.EnterModels;
-using BDExam.Windows;
+﻿using BDExam.Windows;
 using MaterialDesignThemes.Wpf;
 using System;
 using System.Collections.Generic;
@@ -26,7 +25,7 @@ namespace BDExam
     public partial class MainWindow : Window
     {
         AutDataModel.AutDataContext db;
-
+        
 
         public MainWindow()
         {
@@ -41,6 +40,7 @@ namespace BDExam
         {
             if (db.AutDatas.Any(x => x.Login == userLogin.Text && x.Password == userPassword.Password && x.IdRole == 1))
             {
+                
                     MessageBox.Show("Привет Админ!");
                     Windows.MenuWindow menuWindow = new Windows.MenuWindow();
                     menuWindow.Show();
@@ -55,8 +55,6 @@ namespace BDExam
             }
             else 
                 MessageBox.Show("Логин и Пароль не найдены!");
-
-
         }
 
         private void btn_reg_Click(object sender, RoutedEventArgs e)
